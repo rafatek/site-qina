@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qina Design — Do seu jeito. Com a nossa entrega.</title>
+  <meta name="description"
+    content="Projetos de interiores e marcenaria sob medida. Do briefing à execução — com técnica, cuidado e presença. Recife, PE." />
+  <meta property="og:title" content="Qina Design" />
+  <meta property="og:description" content="Do seu jeito. Com a nossa entrega." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/qina_simbolo-1.svg" />
+
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Dependências do Fundo Animado (React + Framer Motion) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+</head>
+
+<body>
+
+  <!-- CURSOR CUSTOM -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="assets/images/qina_logo_horizontal-1.png" alt="Qina Design" class="nav__logo-img" />
+      </a>
+      <nav class="nav__links">
+        <a href="#sobre" class="nav__link">Sobre</a>
+        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#projetos" class="nav__link">Projetos</a>
+        <a href="#processo" class="nav__link">Processo</a>
+        <a href="#contato" class="nav__link nav__link--cta">Fale conosco</a>
+      </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#sobre" class="mobile-menu__link">Sobre</a>
+    <a href="#servicos" class="mobile-menu__link">Serviços</a>
+    <a href="#projetos" class="mobile-menu__link">Projetos</a>
+    <a href="#processo" class="mobile-menu__link">Processo</a>
+    <a href="#contato" class="mobile-menu__link">Contato</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="assets/images/qina_background-2.png" alt="" class="hero__bg-img" />
+      <div class="hero__grain"></div>
+      <div class="hero__overlay"></div>
+      
+      <!-- Logo Animated Background -->
+      <div class="hero__logo-bg reveal-up delay-3">
+        <svg viewBox="0 0 1042 1011" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0.000000,1011.000000) scale(0.100000,-0.100000)">
+            <path class="desenho-arquitetura" pathLength="100" d="M2810 10103 c-106 -6 -316 -35 -434 -59 -556 -117 -1050 -379 -1460
+  -774 -434 -418 -725 -946 -850 -1537 -56 -267 -58 -303 -63 -1068 -5 -720 0
+  -882 33 -1105 81 -556 335 -1102 705 -1520 328 -370 705 -636 1154 -813 338
+  -133 640 -194 1018 -204 l217 -6 0 -1504 0 -1503 2038 3 c2237 3 2065 -1 2394
+  63 684 133 1342 491 1833 995 554 569 873 1225 992 2034 25 173 25 726 0 904
+  -60 424 -162 759 -337 1116 -505 1029 -1471 1749 -2599 1939 -85 15 -156 28
+  -158 30 -2 2 -8 80 -13 174 -59 1076 -653 2003 -1605 2503 -352 185 -739 295
+  -1159 329 -114 9 -1554 12 -1706 3z m1624 -1003 c775 -56 1433 -542 1716
+  -1266 77 -196 130 -461 130 -645 l0 -79 -183 0 c-1397 0 -2610 -990 -2901
+  -2367 -38 -179 -56 -337 -63 -542 l-6 -184 -176 6 c-196 7 -311 23 -480 68
+  -686 182 -1230 735 -1406 1427 -56 222 -58 247 -62 935 -5 697 1 862 42 1064
+  60 293 189 576 374 818 64 85 232 256 321 328 175 141 413 272 622 341 136 45
+  328 84 466 95 156 12 1443 13 1606 1z m1846 -3114 c0 -438 -158 -880 -437
+  -1226 -127 -157 -333 -339 -498 -440 -328 -201 -687 -300 -1086 -300 l-129 0
+  0 64 c0 108 20 314 40 421 103 529 417 994 872 1289 189 123 453 231 671 276
+  148 30 220 37 405 39 l162 1 0 -124z m1312 19 c566 -166 1078 -551 1412 -1062
+  433 -663 527 -1516 249 -2273 -87 -236 -243 -508 -410 -715 -97 -120 -296
+  -316 -413 -407 -373 -289 -812 -469 -1278 -523 -107 -13 -358 -15 -1574 -15
+  l-1448 0 0 1004 0 1003 228 6 c152 4 273 13 367 27 666 99 1249 397 1711 872
+  150 154 230 254 352 438 316 473 468 960 498 1591 l6 127 106 -24 c59 -13 146
+  -35 194 -49z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__label reveal-up">Recife, 2025</p>
+      <h1 class="hero__headline">
+        <span class="hero__line reveal-line">Do seu jeito.</span>
+        <span class="hero__line reveal-line delay-1">Com a nossa</span>
+        <span class="hero__line hero__line--accent reveal-line delay-2">entrega.</span>
+      </h1>
+      <p class="hero__sub reveal-up delay-3">
+        Projetos de interiores e marcenaria sob medida,<br />
+        do briefing à execução — com técnica, cuidado e presença.
+      </p>
+      <div class="hero__actions reveal-up delay-4">
+        <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
+        <a href="#sobre" class="btn btn--ghost">Conheça a Qina</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint reveal-up delay-5">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="sobre" id="sobre" style="position: relative; overflow: hidden;">
+    <!-- Container do React para o fundo animado -->
+    <div id="sobre-background-root" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="sobre__grid">
+        <div class="sobre__text">
+          <p class="label reveal-up">Quem somos</p>
+          <h2 class="section-title reveal-up">
+            Não o mais caro.<br />
+            Não o mais simples.<br />
+            <em>O que funciona.</em>
+          </h2>
+          <p class="sobre__body reveal-up">
+            A Qina Design existe para atender pessoas e empresas que valorizam
+            soluções completas e humanas. Nossa missão é tornar projetos mais
+            acessíveis e bem conduzidos — da escuta ao acabamento.
+          </p>
+          <p class="sobre__body reveal-up">
+            Nossa razão de existir está em viabilizar ideias com método,
+            transformar expectativas em soluções reais e fazer com que cada
+            ambiente funcione com propósito, durabilidade e sentido.
+          </p>
+        </div>
+        <div class="sobre__pillars">
+          <div class="pillar reveal-up">
+            <div class="pillar__icon">01</div>
+            <h3 class="pillar__title">Ouvimos com atenção</h3>
+            <p class="pillar__text">Para entregar com precisão. Cada projeto começa pela escuta.</p>
+          </div>
+          <div class="pillar reveal-up delay-1">
+            <div class="pillar__icon">02</div>
+            <h3 class="pillar__title">Do início ao fim</h3>
+            <p class="pillar__text">Acompanhamos cada etapa. Presentes mesmo quando algo sai do planejado.</p>
+          </div>
+          <div class="pillar reveal-up delay-2">
+            <div class="pillar__icon">03</div>
+            <h3 class="pillar__title">Técnica e humanidade</h3>
+            <p class="pillar__text">Resolvemos com domínio técnico, sem abrir mão do cuidado.</p>
+          </div>
+          <div class="pillar reveal-up delay-3">
+            <div class="pillar__icon">04</div>
+            <h3 class="pillar__title">Clareza sempre</h3>
+            <p class="pillar__text">Prazo, responsabilidade e transparência em cada decisão.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sobre__symbol">
+      <img src="assets/images/qina_simbolo.png" alt="" aria-hidden="true" />
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section class="servicos" id="servicos">
+    <div class="servicos__bg">
+      <img src="assets/images/qina_background-3.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="servicos__header">
+        <p class="label label--light reveal-up">O que fazemos</p>
+        <h2 class="section-title section-title--light reveal-up">
+          Cada espaço tem<br />sua própria medida.
+        </h2>
+      </div>
+      <div class="servicos__grid">
+        <div class="servico-card reveal-up">
+          <span class="servico-card__num">01</span>
+          <h3 class="servico-card__title">Projetos de Interiores</h3>
+          <p class="servico-card__text">Planejamento completo do ambiente, da planta ao acabamento final.</p>
+        </div>
+        <div class="servico-card reveal-up delay-1">
+          <span class="servico-card__num">02</span>
+          <h3 class="servico-card__title">Marcenaria Sob Medida</h3>
+          <p class="servico-card__text">Peças projetadas para o seu espaço com execução criteriosa e acabamento preciso.
+          </p>
+        </div>
+        <div class="servico-card reveal-up delay-2">
+          <span class="servico-card__num">03</span>
+          <h3 class="servico-card__title">Acompanhamento de Obra</h3>
+          <p class="servico-card__text">Presente em cada etapa. Transparente, sempre. Até a entrega das chaves.</p>
+        </div>
+        <div class="servico-card reveal-up delay-3">
+          <span class="servico-card__num">04</span>
+          <h3 class="servico-card__title">Consultoria de Ambientes</h3>
+          <p class="servico-card__text">Para quem precisa de orientação técnica antes de decidir o próximo passo.</p>
+        </div>
+        <div class="servico-card reveal-up delay-1">
+          <span class="servico-card__num">05</span>
+          <h3 class="servico-card__title">Reforma e Renovação</h3>
+          <p class="servico-card__text">Espaços que precisam de um novo propósito. Reformamos com método.</p>
+        </div>
+        <div class="servico-card reveal-up delay-2">
+          <span class="servico-card__num">06</span>
+          <h3 class="servico-card__title">Projeto Comercial</h3>
+          <p class="servico-card__text">Ambientes de trabalho que funcionam com identidade e propósito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETOS ============ -->
+  <section class="projetos" id="projetos">
+    <div class="container">
+      <div class="projetos__header">
+        <p class="label reveal-up">Projetos</p>
+        <h2 class="section-title reveal-up">
+          Do esboço à entrega —<br />
+          <em>projetos feitos para durar.</em>
+        </h2>
+      </div>
+      <div class="projetos__grid">
+        <div class="projeto-card reveal-up" data-category="Residencial">
+          <div class="projeto-card__img">
+            <div class="projeto-card__placeholder projeto-card__placeholder--1"></div>
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Residencial</span>
+              <h3 class="projeto-card__name">Residência Recife</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-1" data-category="Comercial">
+          <div class="projeto-card__img">
+            <div class="projeto-card__placeholder projeto-card__placeholder--2"></div>
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Comercial</span>
+              <h3 class="projeto-card__name">Escritório Corporativo</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-2" data-category="Residencial">
+          <div class="projeto-card__img">
+            <div class="projeto-card__placeholder projeto-card__placeholder--3"></div>
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Residencial</span>
+              <h3 class="projeto-card__name">Apartamento Compacto</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-3" data-category="Marcenaria">
+          <div class="projeto-card__img">
+            <div class="projeto-card__placeholder projeto-card__placeholder--4"></div>
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Marcenaria</span>
+              <h3 class="projeto-card__name">Home Office Planejado</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projetos__cta reveal-up">
+        <a href="#" class="btn btn--outline">Ver todos os projetos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESSO ============ -->
+  <section class="processo" id="processo">
+    <div class="processo__bg">
+      <img src="assets/images/qina_background.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="processo__header">
+        <p class="label label--light reveal-up">Como trabalhamos</p>
+        <h2 class="section-title section-title--light reveal-up">
+          Do seu jeito,<br />com o nosso método.
+        </h2>
+      </div>
+      <div class="processo__steps">
+        <div class="step reveal-up">
+          <div class="step__num">01</div>
+          <div class="step__content">
+            <h3 class="step__title">Escuta</h3>
+            <p class="step__text">Entendemos o espaço, o uso e as expectativas antes de qualquer risco.</p>
+          </div>
+        </div>
+        <div class="step__connector" aria-hidden="true"></div>
+        <div class="step reveal-up delay-1">
+          <div class="step__num">02</div>
+          <div class="step__content">
+            <h3 class="step__title">Briefing</h3>
+            <p class="step__text">Documentamos tudo antes de começar a projetar. Clareza desde o início.</p>
+          </div>
+        </div>
+        <div class="step__connector" aria-hidden="true"></div>
+        <div class="step reveal-up delay-2">
+          <div class="step__num">03</div>
+          <div class="step__content">
+            <h3 class="step__title">Projeto</h3>
+            <p class="step__text">Desenho técnico e visualização do ambiente. Cada detalhe pensado.</p>
+          </div>
+        </div>
+        <div class="step__connector" aria-hidden="true"></div>
+        <div class="step reveal-up delay-3">
+          <div class="step__num">04</div>
+          <div class="step__content">
+            <h3 class="step__title">Aprovação</h3>
+            <p class="step__text">Ajustes até que o projeto seja exatamente o que você imaginou.</p>
+          </div>
+        </div>
+        <div class="step__connector" aria-hidden="true"></div>
+        <div class="step reveal-up delay-4">
+          <div class="step__num">05</div>
+          <div class="step__content">
+            <h3 class="step__title">Execução</h3>
+            <p class="step__text">Acompanhamento total da obra e da marcenaria. Presente em cada etapa.</p>
+          </div>
+        </div>
+        <div class="step__connector" aria-hidden="true"></div>
+        <div class="step reveal-up delay-5">
+          <div class="step__num">06</div>
+          <div class="step__content">
+            <h3 class="step__title">Entrega</h3>
+            <p class="step__text">Espaço pronto, com suporte pós-entrega. O cuidado não termina na chave.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FRASE CENTRAL ============ -->
+  <section class="quote">
+    <div class="container">
+      <blockquote class="quote__text reveal-up">
+        "O bom design não precisa ser óbvio — ele sugere<br />
+        e permite ser descoberto. E depois que você vê,<br />
+        não consegue mais desver."
+      </blockquote>
+      <cite class="quote__author reveal-up">Qina Design</cite>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="container">
+      <p class="label reveal-up">O que dizem sobre a Qina</p>
+      <h2 class="section-title reveal-up">
+        Quem escolhe a Qina sabe:<br />
+        <em>vai funcionar.</em>
+      </h2>
+      <div class="depoimentos__slider" id="slider">
+        <div class="depo-card active">
+          <p class="depo-card__text">"A equipe da Qina foi essencial para transformar nosso apartamento. Cada detalhe
+            foi pensado, cada prazo foi cumprido. O resultado superou o que imaginávamos."</p>
+          <div class="depo-card__author">
+            <div class="depo-card__avatar">M</div>
+            <div>
+              <strong>Mariana S.</strong>
+              <span>Residência Recife — 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card">
+          <p class="depo-card__text">"Profissionalismo e cuidado em cada etapa. A marcenaria ficou perfeita e o
+            acompanhamento da obra foi o diferencial que fez toda a diferença."</p>
+          <div class="depo-card__author">
+            <div class="depo-card__avatar">R</div>
+            <div>
+              <strong>Rafael M.</strong>
+              <span>Home Office — 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card">
+          <p class="depo-card__text">"O que mais me surpreendeu foi a transparência. Quando algo mudou no processo,
+            fomos avisados na hora. Confiança real."</p>
+          <div class="depo-card__author">
+            <div class="depo-card__avatar">C</div>
+            <div>
+              <strong>Carolina P.</strong>
+              <span>Projeto Comercial — 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="depoimentos__dots" id="slider-dots">
+        <button class="dot active" data-idx="0"></button>
+        <button class="dot" data-idx="1"></button>
+        <button class="dot" data-idx="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section class="contato" id="contato">
+    <div class="contato__bg">
+      <img src="assets/images/qina_background-3.png" alt="" />
+      <div class="contato__overlay"></div>
+    </div>
+    <div class="container">
+      <div class="contato__grid">
+        <div class="contato__intro">
+          <p class="label label--light reveal-up">Vamos conversar</p>
+          <h2 class="section-title section-title--light reveal-up">
+            Pronto para começar<br />o seu projeto?
+          </h2>
+          <p class="contato__sub reveal-up">
+            Conta pra gente o que você tem em mente.<br />
+            A gente ouve antes de qualquer coisa.
+          </p>
+          <div class="contato__info reveal-up">
+            <a href="mailto:contato@qinadesign.com.br" class="contato__item">
+              contato@qinadesign.com.br
+            </a>
+            <a href="https://wa.me/558193471912" class="contato__item">
+              WhatsApp — (81) 9347-1912
+            </a>
+            <span class="contato__item">
+              Recife, PE
+            </span>
+          </div>
+        </div>
+        <div class="contato__form-wrap reveal-up">
+          <div class="contato__cta">
+            <h3 class="contato__cta-title">Vamos transformar sua ideia em realidade?</h3>
+            <p class="contato__cta-text">
+              Clique no botão abaixo para conversar diretamente conosco pelo WhatsApp.
+              Estamos prontos para ouvir seu projeto.
+            </p>
+            <a href="https://wa.me/558193471912" target="_blank" class="btn btn--primary btn--full">
+              Falar pelo WhatsApp →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/images/qina_logo_horizontal-1.png" alt="Qina Design" class="footer__logo" />
+          <p class="footer__tagline">Do seu jeito.<br />Com a nossa entrega.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Navegação</h4>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#processo">Processo</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Serviços</h4>
+          <a href="#">Projetos de Interiores</a>
+          <a href="#">Marcenaria Sob Medida</a>
+          <a href="#">Acompanhamento de Obra</a>
+          <a href="#">Consultoria</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contato</h4>
+          <a href="mailto:contato@qinadesign.com.br">contato@qinadesign.com.br</a>
+          <a href="https://wa.me/558193471912" target="_blank">WhatsApp</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Qina Design. Todos os direitos reservados.</span>
+        <span>Recife, PE — Brasil</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- Script do Fundo Animado da seção SOBRE -->
+  <script type="text/babel">
+    const { motion } = window.Motion;
+
+    function FloatingPaths({ position }) {
+      const paths = Array.from({ length: 36 }, (_, i) => ({
+        id: i,
+        d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${
+            380 - i * 5 * position
+        } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${
+            152 - i * 5 * position
+        } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
+            684 - i * 5 * position
+        } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
+        width: 0.5 + i * 0.03,
+      }));
+
+      return (
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+          <svg
+            style={{ width: '100%', height: '100%', color: '#3A5046', opacity: 0.15 }}
+            viewBox="0 0 696 316"
+            fill="none"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <title>Background Paths</title>
+            {paths.map((path) => (
+              <motion.path
+                key={path.id}
+                d={path.d}
+                stroke="currentColor"
+                strokeWidth={path.width}
+                strokeOpacity={0.2 + path.id * 0.03}
+                initial={{ pathLength: 0.3, opacity: 0.6 }}
+                animate={{
+                  pathLength: 1,
+                  opacity: [0.3, 0.6, 0.3],
+                  pathOffset: [0, 1, 0],
+                }}
+                transition={{
+                  duration: 20 + Math.random() * 10,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "linear",
+                }}
+              />
+            ))}
+          </svg>
+        </div>
+      );
+    }
+
+    function SobreBackground() {
+      return (
+        <div style={{ position: 'absolute', inset: 0 }}>
+          <FloatingPaths position={1} />
+          <FloatingPaths position={-1} />
+        </div>
+      );
+    }
+
+    const rootElement = document.getElementById('sobre-background-root');
+    if (rootElement) {
+      const root = ReactDOM.createRoot(rootElement);
+      root.render(<SobreBackground />);
+    }
+  </script>
+</body>
+
+</html>
