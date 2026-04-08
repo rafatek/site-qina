@@ -601,6 +601,39 @@ body.cursor-hover .cursor-follower { width: 48px; height: 48px; border-color: va
   gap: 16px;
   margin-bottom: 48px;
 }
+
+.projetos__filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(228,222,206,0.15);
+  color: rgba(228,222,206,0.5);
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all 0.3s var(--ease-out);
+  cursor: pointer;
+}
+.filter-btn:hover {
+  border-color: rgba(228,222,206,0.4);
+  color: var(--offwhite);
+}
+.filter-btn.active {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: var(--offwhite);
+}
+
+.projeto-card.hidden {
+  display: none;
+}
 .projeto-card {
   position: relative;
   border-radius: var(--radius);
@@ -611,12 +644,20 @@ body.cursor-hover .cursor-follower { width: 48px; height: 48px; border-color: va
   box-shadow: 0 24px 48px rgba(15, 15, 16, 0.4);
   z-index: 10;
 }
+@keyframes skeleton-pulse {
+  0% { background-color: rgba(58,84,67,0.15); }
+  50% { background-color: rgba(58,84,67,0.35); }
+  100% { background-color: rgba(58,84,67,0.15); }
+}
+
 .projeto-card__img {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
   aspect-ratio: 4/3;
   transform: translateZ(0); /* Força aceleração de hardware para bordas perfeitas na animação */
+  background: rgba(58,84,67,0.15);
+  animation: skeleton-pulse 1.5s infinite ease-in-out;
 }
 .projeto-card__placeholder {
   width: 100%; height: 100%;
@@ -642,6 +683,19 @@ body.cursor-hover .cursor-follower { width: 48px; height: 48px; border-color: va
   padding-bottom: 36px; /* Efeito do texto subindo um pouco quando revela */
 }
 .projeto-card:hover .projeto-card__placeholder { transform: scale(1.06); }
+.projeto-card:hover .projeto-card__photo { transform: scale(1.06); }
+
+.projeto-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block; /* Remove espaços subjacentes */
+  opacity: 0; /* Inicia oculto para revelar no JS (Progressive Load) */
+}
+.projeto-card__photo.loaded {
+  opacity: 1;
+}
 .projeto-card__category {
   font-size: 0.7rem;
   font-weight: 500;

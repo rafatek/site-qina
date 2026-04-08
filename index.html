@@ -14,15 +14,19 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/qina_simbolo-1.svg" />
 
+  <!-- Preload Critical Assets -->
+  <link rel="preload" as="image" href="assets/images/qina_background-2.png" />
+  <link rel="preload" as="image" href="assets/images/qina_logo_horizontal-1.png" />
+
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Dependências do Fundo Animado (React + Framer Motion) -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+  <script defer crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script defer src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
 </head>
 
 <body>
@@ -229,20 +233,151 @@
           <em>projetos feitos para durar.</em>
         </h2>
       </div>
+
+      <!-- Filtro de Projetos -->
+      <div class="projetos__filter reveal-up">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="sala">Salas</button>
+        <button class="filter-btn" data-filter="cozinha">Cozinhas</button>
+        <button class="filter-btn" data-filter="quartos">Quartos</button>
+        <button class="filter-btn" data-filter="banheiro">Banheiros</button>
+        <button class="filter-btn" data-filter="comercial">Comercial</button>
+        <button class="filter-btn" data-filter="varanda">Varandas</button>
+      </div>
+
       <div class="projetos__grid">
-        <div class="projeto-card reveal-up" data-category="Residencial">
+        <!-- Salas de Estar (6 imgs) -->
+        <div class="projeto-card reveal-up" data-category="sala">
           <div class="projeto-card__img">
-            <div class="projeto-card__placeholder projeto-card__placeholder--1"></div>
+            <img src="assets/images/projetos/Sala de Estar.webp" alt="Sala de Estar" class="projeto-card__photo" loading="lazy" decoding="async" />
             <div class="projeto-card__overlay">
-              <span class="projeto-card__category">Residencial</span>
-              <h3 class="projeto-card__name">Residência Recife</h3>
+              <span class="projeto-card__category">Sala de Estar</span>
+              <h3 class="projeto-card__name">Projeto Sala de Estar</h3>
               <a href="#" class="projeto-card__link">Ver projeto →</a>
             </div>
           </div>
         </div>
-        <div class="projeto-card reveal-up delay-1" data-category="Comercial">
+        <div class="projeto-card reveal-up delay-1" data-category="sala">
           <div class="projeto-card__img">
-            <div class="projeto-card__placeholder projeto-card__placeholder--2"></div>
+            <img src="assets/images/projetos/Sala de Estar (2).webp" alt="Sala de Estar" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Sala de Estar</span>
+              <h3 class="projeto-card__name">Integração de Ambientes</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up" data-category="sala">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Sala de Estar (3).webp" alt="Sala de Estar" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Sala de Estar</span>
+              <h3 class="projeto-card__name">Sala com Painel</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-1" data-category="sala">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Sala de Estar (4).webp" alt="Sala de Estar" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Sala de Estar</span>
+              <h3 class="projeto-card__name">Decoração Afetiva</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up" data-category="sala">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Sala de estar (5).webp" alt="Sala de Estar" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Sala de Estar</span>
+              <h3 class="projeto-card__name">Sala de Estar Clássica</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-1" data-category="sala">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Estante (sala de Estar).webp" alt="Estante Sala de Estar" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Sala de Estar / Marcenaria</span>
+              <h3 class="projeto-card__name">Estante Sob Medida</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cozinhas (2 imgs) -->
+        <div class="projeto-card reveal-up" data-category="cozinha">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Cozinha.webp" alt="Cozinha Projeto" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Cozinha</span>
+              <h3 class="projeto-card__name">Cozinha Planejada</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-1" data-category="cozinha">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Cozinha (2).webp" alt="Cozinha Interiores" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Cozinha</span>
+              <h3 class="projeto-card__name">Cozinha Ilha Central</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quartos (2 imgs) -->
+        <div class="projeto-card reveal-up" data-category="quartos">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Quarto Suíte Master.webp" alt="Suíte Master" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Quartos</span>
+              <h3 class="projeto-card__name">Suíte Master</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-1" data-category="quartos">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Quarto Infantil.webp" alt="Quarto Infantil" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Quartos</span>
+              <h3 class="projeto-card__name">Quarto Infantil</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banheiros (1 img) -->
+        <div class="projeto-card reveal-up" data-category="banheiro">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Banheiro.webp" alt="Banheiro" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Banheiros</span>
+              <h3 class="projeto-card__name">Banheiro Social</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comercial (2 imgs) -->
+        <div class="projeto-card reveal-up delay-1" data-category="comercial">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Projeto Comercial.webp" alt="Projeto Comercial" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Comercial</span>
+              <h3 class="projeto-card__name">Reforma Comercial</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up" data-category="comercial">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/Projeto Comercial (2).webp" alt="Escritório" class="projeto-card__photo" loading="lazy" decoding="async" />
             <div class="projeto-card__overlay">
               <span class="projeto-card__category">Comercial</span>
               <h3 class="projeto-card__name">Escritório Corporativo</h3>
@@ -250,22 +385,14 @@
             </div>
           </div>
         </div>
-        <div class="projeto-card reveal-up delay-2" data-category="Residencial">
+
+        <!-- Varandas (1 img) -->
+        <div class="projeto-card reveal-up delay-1" data-category="varanda">
           <div class="projeto-card__img">
-            <div class="projeto-card__placeholder projeto-card__placeholder--3"></div>
+            <img src="assets/images/projetos/Varanda.webp" alt="Varanda Gourmet" class="projeto-card__photo" loading="lazy" decoding="async" />
             <div class="projeto-card__overlay">
-              <span class="projeto-card__category">Residencial</span>
-              <h3 class="projeto-card__name">Apartamento Compacto</h3>
-              <a href="#" class="projeto-card__link">Ver projeto →</a>
-            </div>
-          </div>
-        </div>
-        <div class="projeto-card reveal-up delay-3" data-category="Marcenaria">
-          <div class="projeto-card__img">
-            <div class="projeto-card__placeholder projeto-card__placeholder--4"></div>
-            <div class="projeto-card__overlay">
-              <span class="projeto-card__category">Marcenaria</span>
-              <h3 class="projeto-card__name">Home Office Planejado</h3>
+              <span class="projeto-card__category">Varandas</span>
+              <h3 class="projeto-card__name">Varanda Gourmet</h3>
               <a href="#" class="projeto-card__link">Ver projeto →</a>
             </div>
           </div>

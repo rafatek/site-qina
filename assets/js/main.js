@@ -120,6 +120,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+  // ── PORTFOLIO FILTER ──────────────────
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.projetos__grid .projeto-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Atualiza botões
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      projectCards.forEach((card, index) => {
+        const category = card.getAttribute('data-category');
+        
+        if (filterValue === 'all' || filterValue === category) {
+          card.classList.remove('hidden');
+          // Recria o efeito de revelação (fade in/up)
+          card.classList.remove('visible');
+          setTimeout(() => {
+            card.classList.add('visible');
+          }, 50 * index); // stagger suave
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('visible');
+        }
+      });
+    });
+  });
+
   // ── SMOOTH ANCHOR SCROLL ──────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
@@ -147,5 +177,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.4 });
 
   sections.forEach(s => sectionObserver.observe(s));
+
+  // ── PROGRESSIVE IMAGE LOADING ─────────
+  const lazyImages = document.querySelectorAll('.projeto-card__photo');
+  lazyImages.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => {
+        img.classList.add('loaded');
+      });
+      img.addEventListener('error', () => {
+        img.classList.add('loaded'); // Evita tela travada em skeletons caso dê erro no load da img
+      });
+    }
+  });
 
 });
