@@ -15,7 +15,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/qina_simbolo-1.svg" />
 
   <!-- Preload Critical Assets -->
-  <link rel="preload" as="image" href="assets/images/qina_background-2.png" />
+  <link rel="preload" as="image" href="assets/images/projetos/novos/background.webp" />
   <link rel="preload" as="image" href="assets/images/qina_logo_horizontal-1.png" />
 
   <link rel="preconnect" href="https://api.fontshare.com" />
@@ -42,9 +42,9 @@
         <img src="assets/images/qina_logo_horizontal-1.png" alt="Qina Design" class="nav__logo-img" />
       </a>
       <nav class="nav__links">
+        <a href="#projetos" class="nav__link">Projetos</a>
         <a href="#sobre" class="nav__link">Sobre</a>
         <a href="#servicos" class="nav__link">Serviços</a>
-        <a href="#projetos" class="nav__link">Projetos</a>
         <a href="#processo" class="nav__link">Processo</a>
         <a href="#contato" class="nav__link nav__link--cta">Fale conosco</a>
       </nav>
@@ -56,9 +56,9 @@
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobile-menu">
+    <a href="#projetos" class="mobile-menu__link">Projetos</a>
     <a href="#sobre" class="mobile-menu__link">Sobre</a>
     <a href="#servicos" class="mobile-menu__link">Serviços</a>
-    <a href="#projetos" class="mobile-menu__link">Projetos</a>
     <a href="#processo" class="mobile-menu__link">Processo</a>
     <a href="#contato" class="mobile-menu__link">Contato</a>
   </div>
@@ -66,7 +66,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
     <div class="hero__bg">
-      <img src="assets/images/qina_background-2.png" alt="" class="hero__bg-img" />
+      <img src="assets/images/projetos/novos/background.webp" alt="" class="hero__bg-img" />
       <div class="hero__grain"></div>
       <div class="hero__overlay"></div>
       
@@ -118,108 +118,6 @@
     <div class="hero__scroll-hint reveal-up delay-5">
       <span>scroll</span>
       <div class="hero__scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ============ SOBRE ============ -->
-  <section class="sobre" id="sobre" style="position: relative; overflow: hidden;">
-    <!-- Container do React para o fundo animado -->
-    <div id="sobre-background-root" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></div>
-
-    <div class="container" style="position: relative; z-index: 1;">
-      <div class="sobre__grid">
-        <div class="sobre__text">
-          <p class="label reveal-up">Quem somos</p>
-          <h2 class="section-title reveal-up">
-            Não o mais caro.<br />
-            Não o mais simples.<br />
-            <em>O que funciona.</em>
-          </h2>
-          <p class="sobre__body reveal-up">
-            A Qina Design existe para atender pessoas e empresas que valorizam
-            soluções completas e humanas. Nossa missão é tornar projetos mais
-            acessíveis e bem conduzidos — da escuta ao acabamento.
-          </p>
-          <p class="sobre__body reveal-up">
-            Nossa razão de existir está em viabilizar ideias com método,
-            transformar expectativas em soluções reais e fazer com que cada
-            ambiente funcione com propósito, durabilidade e sentido.
-          </p>
-        </div>
-        <div class="sobre__pillars">
-          <div class="pillar reveal-up">
-            <div class="pillar__icon">01</div>
-            <h3 class="pillar__title">Ouvimos com atenção</h3>
-            <p class="pillar__text">Para entregar com precisão. Cada projeto começa pela escuta.</p>
-          </div>
-          <div class="pillar reveal-up delay-1">
-            <div class="pillar__icon">02</div>
-            <h3 class="pillar__title">Do início ao fim</h3>
-            <p class="pillar__text">Acompanhamos cada etapa. Presentes mesmo quando algo sai do planejado.</p>
-          </div>
-          <div class="pillar reveal-up delay-2">
-            <div class="pillar__icon">03</div>
-            <h3 class="pillar__title">Técnica e humanidade</h3>
-            <p class="pillar__text">Resolvemos com domínio técnico, sem abrir mão do cuidado.</p>
-          </div>
-          <div class="pillar reveal-up delay-3">
-            <div class="pillar__icon">04</div>
-            <h3 class="pillar__title">Clareza sempre</h3>
-            <p class="pillar__text">Prazo, responsabilidade e transparência em cada decisão.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sobre__symbol">
-      <img src="assets/images/qina_simbolo.png" alt="" aria-hidden="true" />
-    </div>
-  </section>
-
-  <!-- ============ SERVIÇOS ============ -->
-  <section class="servicos" id="servicos">
-    <div class="servicos__bg">
-      <img src="assets/images/qina_background-3.png" alt="" />
-    </div>
-    <div class="container">
-      <div class="servicos__header">
-        <p class="label label--light reveal-up">O que fazemos</p>
-        <h2 class="section-title section-title--light reveal-up">
-          Cada espaço tem<br />sua própria medida.
-        </h2>
-      </div>
-      <div class="servicos__grid">
-        <div class="servico-card reveal-up">
-          <span class="servico-card__num">01</span>
-          <h3 class="servico-card__title">Projetos de Interiores</h3>
-          <p class="servico-card__text">Planejamento completo do ambiente, da planta ao acabamento final.</p>
-        </div>
-        <div class="servico-card reveal-up delay-1">
-          <span class="servico-card__num">02</span>
-          <h3 class="servico-card__title">Marcenaria Sob Medida</h3>
-          <p class="servico-card__text">Peças projetadas para o seu espaço com execução criteriosa e acabamento preciso.
-          </p>
-        </div>
-        <div class="servico-card reveal-up delay-2">
-          <span class="servico-card__num">03</span>
-          <h3 class="servico-card__title">Acompanhamento de Obra</h3>
-          <p class="servico-card__text">Presente em cada etapa. Transparente, sempre. Até a entrega das chaves.</p>
-        </div>
-        <div class="servico-card reveal-up delay-3">
-          <span class="servico-card__num">04</span>
-          <h3 class="servico-card__title">Consultoria de Ambientes</h3>
-          <p class="servico-card__text">Para quem precisa de orientação técnica antes de decidir o próximo passo.</p>
-        </div>
-        <div class="servico-card reveal-up delay-1">
-          <span class="servico-card__num">05</span>
-          <h3 class="servico-card__title">Reforma e Renovação</h3>
-          <p class="servico-card__text">Espaços que precisam de um novo propósito. Reformamos com método.</p>
-        </div>
-        <div class="servico-card reveal-up delay-2">
-          <span class="servico-card__num">06</span>
-          <h3 class="servico-card__title">Projeto Comercial</h3>
-          <p class="servico-card__text">Ambientes de trabalho que funcionam com identidade e propósito.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -364,7 +262,7 @@
           </div>
         </div>
 
-        <!-- Comercial (2 imgs) -->
+        <!-- Comercial (5 imgs) -->
         <div class="projeto-card reveal-up delay-1" data-category="comercial">
           <div class="projeto-card__img">
             <img src="assets/images/projetos/Projeto Comercial.webp" alt="Projeto Comercial" class="projeto-card__photo" loading="lazy" decoding="async" />
@@ -381,6 +279,36 @@
             <div class="projeto-card__overlay">
               <span class="projeto-card__category">Comercial</span>
               <h3 class="projeto-card__name">Escritório Corporativo</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-1" data-category="comercial">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/novos/sala-comercial.webp" alt="Sala Comercial" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Comercial</span>
+              <h3 class="projeto-card__name">Sala Comercial</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up" data-category="comercial">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/novos/sala-comercial2.webp" alt="Consultório Comercial" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Comercial</span>
+              <h3 class="projeto-card__name">Design Corporativo</h3>
+              <a href="#" class="projeto-card__link">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-card reveal-up delay-1" data-category="comercial">
+          <div class="projeto-card__img">
+            <img src="assets/images/projetos/novos/sala-comercial3.webp" alt="Escritório Moderno" class="projeto-card__photo" loading="lazy" decoding="async" />
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__category">Comercial</span>
+              <h3 class="projeto-card__name">Espaço Premium</h3>
               <a href="#" class="projeto-card__link">Ver projeto →</a>
             </div>
           </div>
@@ -403,6 +331,116 @@
       </div>
     </div>
   </section>
+  <section class="sobre" id="sobre" style="position: relative; overflow: hidden;">
+    <!-- Container do React para o fundo animado -->
+    <div id="sobre-background-root" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="sobre__grid">
+        <div class="sobre__text">
+          <p class="label reveal-up">Quem somos</p>
+          <h2 class="section-title reveal-up">
+            Não o mais caro.<br />
+            Não o mais simples.<br />
+            <em>O que funciona.</em>
+          </h2>
+          <p class="sobre__body reveal-up">
+            A Qina Design existe para atender pessoas e empresas que valorizam soluções completas e personalizadas. Nossa missão é presença e transparência, com execução técnica e acabamento criterioso.
+          </p>
+          <p class="sobre__body reveal-up">
+            Nossa razão de existir está em viabilizar ideias com método, transformando expectativas em soluções reais e fazendo com que cada ambiente funcione com propósito, durabilidade e sentido.
+          </p>
+        </div>
+        <div class="sobre__pillars">
+          <p class="label reveal-up" style="grid-column: 1 / -1; margin-bottom: 24px; margin-top: 12px;">O que fazemos</p>
+
+          <div class="pillar reveal-up">
+            <div class="pillar__icon">01</div>
+            <h3 class="pillar__title">Atendimento personalizado</h3>
+            <p class="pillar__text">Ouvimos com presença e atenção todas as informações.</p>
+          </div>
+          <div class="pillar reveal-up delay-1">
+            <div class="pillar__icon">02</div>
+            <h3 class="pillar__title">Projeto completo</h3>
+            <p class="pillar__text">Marcenaria, serralharia, vidraçaria, laca e mais. Tudo em um só lugar!</p>
+          </div>
+          <div class="pillar reveal-up delay-2">
+            <div class="pillar__icon">03</div>
+            <h3 class="pillar__title">Projeto Executivo</h3>
+            <p class="pillar__text">Elaboramos um projeto detalhado com todas as informações necessárias.</p>
+          </div>
+          <div class="pillar reveal-up delay-3">
+            <div class="pillar__icon">04</div>
+            <h3 class="pillar__title">Follow-up</h3>
+            <p class="pillar__text">Transparência e comunicação ativa em todo processo de atendimento até a execução e entrega.</p>
+          </div>
+          <div class="pillar reveal-up delay-4">
+            <div class="pillar__icon">05</div>
+            <h3 class="pillar__title">Tecnologia e processos</h3>
+            <p class="pillar__text">Maquinários de última geração e processos que permitem mais organização, acabamento e qualidade.</p>
+          </div>
+          <div class="pillar reveal-up delay-5">
+            <div class="pillar__icon">06</div>
+            <h3 class="pillar__title">Prazo e responsabilidade</h3>
+            <p class="pillar__text">A programação do cliente é tratada com compromisso e clareza.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sobre__symbol">
+      <img src="assets/images/qina_simbolo.png" alt="" aria-hidden="true" />
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section class="servicos" id="servicos">
+    <div class="servicos__bg">
+      <img src="assets/images/qina_background-3.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="servicos__header">
+        <p class="label reveal-up">O que fazemos</p>
+        <h2 class="section-title reveal-up">
+          Cada espaço tem<br />sua própria medida.
+        </h2>
+      </div>
+      <div class="servicos__grid">
+        <div class="servico-card reveal-up">
+          <span class="servico-card__num">01</span>
+          <h3 class="servico-card__title">Projetos de Interiores</h3>
+          <p class="servico-card__text">Planejamento completo do ambiente, da planta ao acabamento final.</p>
+        </div>
+        <div class="servico-card reveal-up delay-1">
+          <span class="servico-card__num">02</span>
+          <h3 class="servico-card__title">Marcenaria Sob Medida</h3>
+          <p class="servico-card__text">Peças projetadas para o seu espaço com execução criteriosa e acabamento preciso.
+          </p>
+        </div>
+        <div class="servico-card reveal-up delay-2">
+          <span class="servico-card__num">03</span>
+          <h3 class="servico-card__title">Acompanhamento de Obra</h3>
+          <p class="servico-card__text">Presente em cada etapa. Transparente, sempre. Até a entrega das chaves.</p>
+        </div>
+        <div class="servico-card reveal-up delay-3">
+          <span class="servico-card__num">04</span>
+          <h3 class="servico-card__title">Consultoria de Ambientes</h3>
+          <p class="servico-card__text">Para quem precisa de orientação técnica antes de decidir o próximo passo.</p>
+        </div>
+        <div class="servico-card reveal-up delay-1">
+          <span class="servico-card__num">05</span>
+          <h3 class="servico-card__title">Reforma e Renovação</h3>
+          <p class="servico-card__text">Espaços que precisam de um novo propósito. Reformamos com método.</p>
+        </div>
+        <div class="servico-card reveal-up delay-2">
+          <span class="servico-card__num">06</span>
+          <h3 class="servico-card__title">Projeto Comercial</h3>
+          <p class="servico-card__text">Ambientes de trabalho que funcionam com identidade e propósito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- ============ PROCESSO ============ -->
   <section class="processo" id="processo">
@@ -411,8 +449,8 @@
     </div>
     <div class="container">
       <div class="processo__header">
-        <p class="label label--light reveal-up">Como trabalhamos</p>
-        <h2 class="section-title section-title--light reveal-up">
+        <p class="label reveal-up">Como trabalhamos</p>
+        <h2 class="section-title reveal-up">
           Do seu jeito,<br />com o nosso método.
         </h2>
       </div>
@@ -540,8 +578,8 @@
     <div class="container">
       <div class="contato__grid">
         <div class="contato__intro">
-          <p class="label label--light reveal-up">Vamos conversar</p>
-          <h2 class="section-title section-title--light reveal-up">
+          <p class="label reveal-up">Vamos conversar</p>
+          <h2 class="section-title reveal-up">
             Pronto para começar<br />o seu projeto?
           </h2>
           <p class="contato__sub reveal-up">
