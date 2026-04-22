@@ -483,12 +483,12 @@ body.cursor-hover .cursor-follower {
 }
 
 .hero__headline {
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
   font-weight: 700;
-  line-height: 1.0;
-  letter-spacing: -0.03em;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
   margin-bottom: 28px;
-  max-width: 10ch;
+  max-width: 15ch;
   color: var(--verde);
 }
 
