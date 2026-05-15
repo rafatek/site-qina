@@ -15,7 +15,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/qina_simbolo-1.svg" />
 
   <!-- Preload Critical Assets -->
-  <link rel="preload" as="image" href="assets/images/projetos/novos/background.webp" />
+  <!-- Note: Preloading a 20MB video is not recommended, so we removed the background.webp preload. -->
   <link rel="preload" as="image" href="assets/images/qina_logo_horizontal-1.png" />
 
   <link rel="preconnect" href="https://api.fontshare.com" />
@@ -66,7 +66,10 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
     <div class="hero__bg">
-      <img src="assets/images/projetos/novos/background.webp" alt="" class="hero__bg-img" />
+      <video class="hero__bg-video" autoplay loop muted playsinline
+        poster="assets/images/projetos/novos/background.webp">
+        <source src="assets/vd/vsl-qina.webm" type="video/webm" />
+      </video>
       <div class="hero__grain"></div>
       <div class="hero__overlay"></div>
 
@@ -106,8 +109,7 @@
         <span class="hero__line hero__line--accent reveal-line delay-2">entrega.</span>
       </h1>
       <p class="hero__sub reveal-up delay-3">
-        Projetos de interiores e marcenaria sob medida,<br />
-        do briefing à execução — com técnica, cuidado e presença.
+        Fábrica de móveis planejados sob medida, da escuta à entrega.<br /> Com técnica, cuidado e presença.
       </p>
       <div class="hero__actions reveal-up delay-4">
         <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
@@ -470,7 +472,7 @@
           <div class="step__num">01</div>
           <div class="step__content">
             <h3 class="step__title">Escuta</h3>
-            <p class="step__text">Entendemos o espaço, o uso e as expectativas antes de qualquer risco.</p>
+            <p class="step__text">Entendemos o espaço, o uso e as expectativas antes de qualquer desenho.</p>
           </div>
         </div>
         <div class="step__connector" aria-hidden="true"></div>
@@ -486,7 +488,7 @@
           <div class="step__num">03</div>
           <div class="step__content">
             <h3 class="step__title">Projeto</h3>
-            <p class="step__text">Desenho técnico e visualização do ambiente. Cada detalhe pensado.</p>
+            <p class="step__text">Desenho técnico prévio, garantindo uma execução alinhada à expectativa.</p>
           </div>
         </div>
         <div class="step__connector" aria-hidden="true"></div>
@@ -494,7 +496,7 @@
           <div class="step__num">04</div>
           <div class="step__content">
             <h3 class="step__title">Aprovação</h3>
-            <p class="step__text">Ajustes até que o projeto seja exatamente o que você imaginou.</p>
+            <p class="step__text">Garantimos uma execução conforme projeto executivo aprovado.</p>
           </div>
         </div>
         <div class="step__connector" aria-hidden="true"></div>
@@ -502,7 +504,7 @@
           <div class="step__num">05</div>
           <div class="step__content">
             <h3 class="step__title">Execução</h3>
-            <p class="step__text">Acompanhamento total da obra e da marcenaria. Presente em cada etapa.</p>
+            <p class="step__text">Todas as etapas são acompanhadas e informadas para melhor programação do cliente.</p>
           </div>
         </div>
         <div class="step__connector" aria-hidden="true"></div>
@@ -521,9 +523,7 @@
   <section class="quote">
     <div class="container">
       <blockquote class="quote__text reveal-up">
-        "O bom design não precisa ser óbvio — ele sugere<br />
-        e permite ser descoberto. E depois que você vê,<br />
-        não consegue mais desver."
+        "Um projeto bem executado não aparece apenas na estética.</br> Aparece no uso, no tempo e nos detalhes."
       </blockquote>
       <cite class="quote__author reveal-up">Qina Design</cite>
     </div>
